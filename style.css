@@ -1,0 +1,96 @@
+@font-face {
+  font-family: calculatorDigits;
+  src: url(fonts/digital-7.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #f6e8b1;
+}
+
+button {
+  background-color: #544c4a;
+  color: #dfdfdf;
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.container {
+  border: 5px solid #212121;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px auto;
+  background-color: #212121;
+  width: 335px;
+  height: 500px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: calculatorDigits;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.5);
+  padding: 5%;
+  width: 290px;
+  height: 80px;
+  background-color: #eba91c;
+  border-radius: 10px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: right;
+  color: black;
+}
+
+.touchPad {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 350px;
+  background-color: #212121;
+  border-radius: 10px;
+  gap: 10px;
+}
+
+.touchTop {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.touchBottom {
+  display: flex;
+  width: inherit;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: baseline;
+  gap: 13px;
+}
+.equalBtn {
+  width: 9rem;
+  border-radius: 50px;
+}
