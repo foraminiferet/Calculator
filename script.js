@@ -136,7 +136,7 @@ operationsBtn.forEach((e) => {
     } else {
       secondOperation = e.target.value;
       secondValue = convertToNum(arr.join("").split(firstOperation)[1]);
-      updateForSecondOperand();
+      updateForSecondOperand(e);
     }
   });
 });
@@ -145,16 +145,16 @@ function convertToNum(str) {
   return str.includes(".") ? parseFloat(str) : parseInt(str);
 }
 
-function updateForSecondOperand() {
+function updateForSecondOperand(e) {
+  console.log(e.target.textContent);
   screenOutput.textContent = operate(firstValue, firstOperation, secondValue);
-  screenOutput.textContent += secondOperation;
+  screenOutput.textContent += e.target.textContent;
   firstValue = operate(firstValue, firstOperation, secondValue);
   firstOperation = secondOperation;
   secondOperation = undefined;
   arr.splice(0);
   arr.push(...String(firstValue).split(""));
   arr.push(firstOperation);
-  console.log(firstOperation, firstValue, arr);
   result.textContent = "";
 }
 

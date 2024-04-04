@@ -94,3 +94,10 @@ button {
   width: 9rem;
   border-radius: 50px;
 }
+.user-input {
+  height: 30px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-align: right;
+  color: black;
+}
